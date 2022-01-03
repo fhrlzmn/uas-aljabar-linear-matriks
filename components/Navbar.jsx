@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 const navMenu = [
-  ['/about', 'About'],
   ['/contact', 'Contact'],
   ['/projects', 'Projects'],
+  ['/about', 'About'],
 ];
 
 export default function Navbar() {
@@ -12,19 +12,26 @@ export default function Navbar() {
       <Link href={'/'}>
         <a className='py-2 text-xl'>Kelompok 5</a>
       </Link>
-      <ul className='flex py-2'>
+      <ul className='flex py-2 space-x-8 items-end'>
         {navMenu.map(([url, title], index) => (
           <li key={index}>
             <Link href={url}>
-              <a className='px-3 text-gray-500 hover:text-black'>{title}</a>
+              <a className='text-gray-500 hover:text-black'>{title}</a>
             </Link>
           </li>
         ))}
         <li>
+          <Link href={'/'}>
+            <a className='rounded-md box-border border-2 border-blue-500 bg-blue-500 px-4 py-1.5 text-white hover:text-blue-500 hover:bg-white'>
+              Source Code
+            </a>
+          </Link>
+        </li>
+        <li>
           <Link href={'https://www.github.com/fhrlzmn'}>
             <a>
               <svg
-                className='fill-gray-500 hover:fill-black ml-3'
+                className='fill-gray-500 hover:fill-black'
                 height='22'
                 width='22'
                 viewBox='0 0 16 16'
