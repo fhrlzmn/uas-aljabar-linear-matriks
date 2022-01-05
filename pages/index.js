@@ -12,15 +12,19 @@ export default function Home() {
 
       {/* Row 2 */}
       <div className='text-center'>
-        <h2 className='font-semibold text-4xl leading-normal'>Tugas Akhir</h2>
-        <h3 className='font-medium text-2xl'>Aljabar Linear & Matriks</h3>
-        <p className='font-normal text-xl'>Membuat Program Matriks dan SPL</p>
+        <h2 className='font-bold text-5xl leading-normal'>Tugas Akhir</h2>
+        <h3 className='font-medium text-5xl leading-normal'>
+          Aljabar Linear & Matriks
+        </h3>
+        <p className='font-normal text-4xl leading-normal'>
+          Membuat Program Matriks dan SPL
+        </p>
       </div>
 
       {/* Row 3 */}
       <div className='text-center'>
-        <Link href={'/about'}>
-          <a className='rounded-md font-semibold bg-blue-500 px-4 py-2 text-white drop-shadow-md hover:drop-shadow-xl hover:opacity-90 transition-all duration-300'>
+        <Link href={'/anggota'}>
+          <a className='text-xl rounded-md font-semibold bg-blue-500 px-4 py-2 text-white drop-shadow-md hover:drop-shadow-xl hover:opacity-90 transition-all duration-300'>
             Lihat Anggota Kelompok
           </a>
         </Link>

@@ -2,33 +2,40 @@ import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 
 const navMenu = [
-  ['/contact', 'Contact'],
-  ['/projects', 'Projects'],
-  ['/about', 'About'],
+  ['/matriks', 'Matriks'],
+  ['/spl', 'Sistem Persamaan Linear'],
+  ['/anggota', 'Anggota'],
 ];
 
 export default function Navbar() {
   return (
     <Popover
       as={'nav'}
-      className='flex sticky z-50 top-0 bg-white h-16 items-center md:space-x-4 max-w-screen-lg mx-auto px-6 font-semibold'
+      className='flex sticky z-50 top-0 bg-white h-16 items-center  max-w-screen-lg mx-auto px-6 font-semibold'
     >
       <div className='flex flex-1 items-center justify-between'>
-        <div className='flex-1'>
+        {/* Logo */}
+        <div className='flex basis-1/4 flex-1'>
           <Link href={'/'}>
             <a className='text-xl'>Kelompok 5</a>
           </Link>
         </div>
-        <div className='md:flex hidden flex-1 items-center justify-around'>
+
+        {/* Menu */}
+        <div className='md:flex basis-2/4 hidden flex-auto items-center justify-around'>
           {navMenu.map(([url, title], index) => (
-            <Link key={index} href={url}>
-              <a key={index} className='text-gray-500 hover:text-black'>
-                {title}
-              </a>
-            </Link>
+            <div key={index} className='text-center'>
+              <Link key={index} href={url}>
+                <a key={index} className='text-gray-500 hover:text-black'>
+                  {title}
+                </a>
+              </Link>
+            </div>
           ))}
         </div>
-        <div className='md:flex hidden items-center space-x-6 justify-end flex-1'>
+
+        {/* Github */}
+        <div className='md:flex basis-1/4 flex-1 hidden items-center space-x-4 justify-end'>
           <Link href={'/'}>
             <a className='rounded-md box-border border-2 border-blue-500 bg-blue-500 px-4 py-1 text-white hover:text-blue-500 hover:bg-white'>
               Source Code
