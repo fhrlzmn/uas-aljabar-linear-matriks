@@ -6,10 +6,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Montserrat', 'sans-serif'],
-        'bebas': ['Bebas Neue', 'cursive']
+        sans: ['Montserrat', 'sans-serif'],
+        bebas: ['Bebas Neue', 'cursive'],
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };
